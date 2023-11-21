@@ -9,6 +9,7 @@ import { IconType } from "react-icons"
 
 interface Props {
     platforms: Platform[]
+
 }
 
 
