@@ -10,6 +10,7 @@ const useGenres = <T>(endpoint: string, requestConfig?: AxiosRequestConfig, deps
   const [data, setData] = useState<T[]>([]);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+
   useEffect(() => {
     //cleanup function
     setIsLoading(true);
@@ -32,7 +33,7 @@ const useGenres = <T>(endpoint: string, requestConfig?: AxiosRequestConfig, deps
     return () => controller.abort();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, deps ? [...deps]:[]);
-  return { data, error, isLoading };
+  return { data, error, isLoading};
 };
 
 export default useGenres;

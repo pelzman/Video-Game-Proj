@@ -2,12 +2,14 @@ import { Button, HStack, Image, List, ListItem, Spinner, Text } from "@chakra-ui
 import useGenres from "../hooks/useGenres"
 import getCroppedImageUrl from "../services/getCroppedImage"
 import { Genres } from "../hooks/useGenres"
+import { Platform } from "../hooks/useGame"
 
 interface Props {
     onSelectGenre: (genre: Genres) => void
     selectedGenre?: Genres | null;
+    selectedPlatform? : Platform | null
 }
-const GenureLists = ({ selectedGenre, onSelectGenre }: Props) => {
+const GenureLists = ({ selectedGenre, onSelectGenre}: Props) => {
 
     const { data, isLoading, error } = useGenres()
 
