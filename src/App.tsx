@@ -12,6 +12,7 @@ export interface GameQuery {
   genre: Genres | null
 
   platform: Platform | null
+  sortOrder: string
 }
 
 function App() {
@@ -45,7 +46,7 @@ function App() {
       <GridItem area="main" paddingX={4}>
         <HStack spacing={5} marginBottom={5}>
           <PlatformSelectItem selectedPlatform={gameQuery.platform} onSelectedPlatform={(platform) => setGameQuery({ ...gameQuery, platform })} />
-          <SortSelector />
+          <SortSelector sortOrder={gameQuery.sortOrder} onSortingItem={(sortOrder: string) => setGameQuery({ ...gameQuery, sortOrder })} />
         </HStack>
 
         <GameGrid gameQuery={gameQuery} />
