@@ -3321,6 +3321,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gsap@npm:^3.12.2":
+  version: 3.12.2
+  resolution: "gsap@npm:3.12.2"
+  checksum: 64c8bdb932bded60e8eb669d1da126b18c241f7434c96772e0e1472d40ceeeb54a0d73d5db958a0532d93af6f5b2517d9f1e7ef862393fedda84d1ab8af03e07
+  languageName: node
+  linkType: hard
+
 "has-flag@npm:^3.0.0":
   version: 3.0.0
   resolution: "has-flag@npm:3.0.0"
@@ -4753,6 +4760,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:^4.6.0"
     eslint-plugin-react-refresh: "npm:^0.4.3"
     framer-motion: "npm:^10.16.5"
+    gsap: "npm:^3.12.2"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-icons: "npm:4.7.1"
