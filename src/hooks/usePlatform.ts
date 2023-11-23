@@ -1,10 +1,13 @@
-import useData from "./useData";
+// import useData from "./useData";
+import platforms from "../data/platforms";
 
-interface PlatformProps {
+export interface PlatformProps {
   id: number;
   name: string;
   slug: string;
 }
-
-const usePlatform = () => useData<PlatformProps>("/platforms/lists/parents");
+// calling static data
+const usePlatform = () => ({ data: platforms, isLoading: false, error: null });
+//calling server
+// const usePlatform = () => useData<PlatformProps>("/platforms/lists/parents");
 export default usePlatform;

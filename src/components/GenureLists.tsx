@@ -4,6 +4,7 @@ import getCroppedImageUrl from "../services/getCroppedImage"
 import { Genres } from "../hooks/useGenres"
 import { Platform } from "../hooks/useGame"
 
+
 interface Props {
     onSelectGenre: (genre: Genres) => void
     selectedGenre?: Genres | null;
@@ -12,6 +13,7 @@ interface Props {
 const GenureLists = ({ selectedGenre, onSelectGenre }: Props) => {
 
     const { data, isLoading, error } = useGenres()
+  
 
     if (error) return null
     if (isLoading) return <Spinner />
